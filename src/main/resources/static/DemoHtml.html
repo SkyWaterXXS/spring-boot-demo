@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="name" placeholder="you name">
+<button id="clickMe">clickMe</button>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    //访问：http://127.0.0.1:8080/DemoHtml.html
+    $(document).ready(function () {
+        $("#clickMe").click(function () {
+            $.ajax({
+                url: "helloworld/test",
+                type: "post",
+                data: {
+                    "name": $("#name").val()
+                },
+                success: function (data) {
+                    alert(data)
+                }
+            });
+        })
+    });
+</script>
+</html>

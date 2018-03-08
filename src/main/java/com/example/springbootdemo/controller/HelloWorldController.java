@@ -13,7 +13,7 @@ public class HelloWorldController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public String test() {
-        return "hello world";
+    public String test(String name) {
+        return "hello " + name;
     }
 }
