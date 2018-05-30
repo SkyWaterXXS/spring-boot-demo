@@ -37,6 +37,12 @@
         order by id desc limit #{startPage},#{pageSize}
     </select>
 
+    <select id="findMap" resultType="Map">
+        SELECT
+        <include refid="listColumns"/>
+        FROM invitation_config
+    </select>
+
     <select id="findCount" parameterType="InvitationConfig"
             resultType="long">
         SELECT

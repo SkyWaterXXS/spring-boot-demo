@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -13,6 +14,8 @@ import java.util.List;
 @Repository
 public interface InvitationConfigMapper {
     List<InvitationConfig> find(InvitationConfig entity);
+
+    List<Map<String,String>> findMap();
 
     long findCount(InvitationConfig entity);
 
